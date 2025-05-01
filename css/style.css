@@ -5,13 +5,17 @@
         background-color: #F5EEDD;
     }
     .header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
         height: 70px;
         padding: 20px;
         color: #7ae2cf;
         background-color: #06202B;
         display: flex;
         justify-content: space-between;
-        align-items: center; 
+        align-items: center;
     }
     nav a {
         color: #7ae2cf;
@@ -166,6 +170,7 @@
         }
         h1 {
             font-size: 30px;
+            margin-top: 80px;
         }
         #info {
             font-size: 10px;

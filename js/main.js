@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("jQuery is working!");
     const templates = $('.roller-item');
     let main_index = 0;
 
