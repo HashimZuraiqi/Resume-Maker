@@ -201,7 +201,7 @@
       }
     @media (max-width: 600px) {
         .header {
-            height: 110px;
+            height: 78px;
             padding: 10px;
             flex-direction: column;
         }
