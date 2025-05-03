@@ -1,75 +1,228 @@
-*{
-    scroll-behavior: smooth;
-}
-body {
-    background-color: #F5EEDD;
-}
-.header {
-    height: 70px;
-    padding: 20px;
-    color: #7ae2cf;
-    background-color: #06202B;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-}
-nav a {
-    color: #7ae2cf;
-    font-weight: bold;
-    padding: 20px;
-    font-size: 15px;
-}
-ul {
-    list-style-type: none;
-}
-section {
-    padding: 100px;
-    height: 100vh;
-    text-align: center;
-}
-#info {
-    background-color: #f5fff9;
-    color: #06202B;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 100%;
-}
-#begin {
-    width: 370px;
-    border-radius: 20px;
-}
-button {
-    background-color: #077a7d;
-    border-radius: 25px;
-    border: none;
-    color:  white;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-@media (max-width: 600px) {
+    *{
+        scroll-behavior: smooth;
+    }
+    body {
+        background-color: #F5EEDD;
+    }
+    #home {
+        margin-top: 60px;
+    }
     .header {
-        height: 110px;
-        padding: 10px;
-        flex-direction: column;
+
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        height: 70px;
+        padding: 20px;
+        color: #7ae2cf;
+        background-color: #06202B;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     nav a {
-        font-size: 14px;
-        padding: 10px;
+        color: #7ae2cf;
+        font-weight: bold;
+        padding: 20px;
+        font-size: 15px;
     }
-    h1 {
-        font-size: 30px;
+    ul {
+        list-style-type: none;
     }
-    #info {
-        font-size: 10px;
-    }
-    button {
-        font-size: 12px;
+    h1:hover {
+        color: #077a7d;
+        transform: scale(1.05);
+        transition: all 0.5s ease-in-out;
     }
     section {
-        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px;
+        height: auto;
+        text-align: center;
     }
-}
+    #info {
+        background-color: #f5fff9;
+        color: #06202B;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        width: 100%;
+    }
+    #begin {
+        width: 370px;
+        border-radius: 20px;
+    }
+    button {
+        background-color: #077a7d;
+        border-radius: 25px;
+        border: none;
+        color:  white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #06202B;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+    img:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+    #info:hover {
+        transform: scale(1.01);
+        transition: all 0.3s ease-in-out;
+    }
+    #login-box{
+        height: 70vh;
+        width: 90%;
+        max-width: 600px;
+        margin: 100px auto;
+        background-color: #f5fff9;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: transform 0.5s ease-in-out;
+    }
+    h2 {
+        text-align: center;
+    }
+    #login-box input {
+        padding: 8px;
+        width: 90%;
+        border: 3px solid #077a7d;
+        background-color:#f5fff9;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    #login-box label {
+        font-size: 13px;
+    }
+    #login-box button {
+        display: block;
+        background-color:#06202B;
+        width: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    #login-box a{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    #login-box:hover{
+        transform: scale(1.01);
+    }
+    #login-box input:invalid {
+        border-color: red;
+    }
+    form {
+        margin-top: 15%;
+        text-align: left;
+    }
+    svg{
+        color: #06202B;
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background-color: #f5fff9;
+        border-radius: 100%;
+    }
+    svg:hover {
+        transform: scale(1.05);
+        background-color: #06202B;
+        color: #f5fff9;
+        transition: all 0.5s ease-in-out;
+    }
+    .roller-container {
+        margin-top: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .roller {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 80%;
+        height: 400px;
+    }
+    .roller-item {
+        position: absolute;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: all 0.4s ease;
+        max-width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .roller-item img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .roller-item.active {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 3;
+      }
+      
+      .roller-item.left {
+        opacity: 0.6;
+        transform: translateX(-50%) scale(0.85);
+        z-index: 2;
+      }
+      
+      .roller-item.right {
+        opacity: 0.6;
+        transform: translateX(50%) scale(0.85);
+        z-index: 2;
+      }
+      .left-arrow, .right-arrow {
+        background: #077a7d;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10;
+      }
+    @media (max-width: 600px) {
+        .header {
+            height: 78px;
+            padding: 10px;
+            flex-direction: column;
+        }
+        nav a {
+            font-size: 14px;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 30px;
+            /* margin-top: 80px; */
+        }
+        #info {
+            font-size: 10px;
+        }
+        button {
+            font-size: 12px;
+        }
+        section {
+            padding: 50px;
+        }
+        #about {
+           height: auto;
+        }
+    }
