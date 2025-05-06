@@ -1,3 +1,4 @@
+    /*index.html*/
     *{
         scroll-behavior: smooth;
     }
@@ -119,9 +120,9 @@
     #login-box:hover{
         transform: scale(1.01);
     }
-    #login-box input:invalid {
+    /* #login-box input:invalid {
         border-color: red;
-    }
+    } */
         /*signup css start*/
 .signup-page
 {
