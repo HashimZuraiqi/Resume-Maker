@@ -1,3 +1,4 @@
+    /*index.html*/
     *{
         scroll-behavior: smooth;
     }
@@ -119,9 +120,92 @@
     #login-box:hover{
         transform: scale(1.01);
     }
-    #login-box input:invalid {
+    /* #login-box input:invalid {
         border-color: red;
-    }
+    } */
+        /*signup css start*/
+.signup-page
+{
+    background-color: #f5ecda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+#signupbox {
+ background-color: #F5FFF9;
+ color: black;
+    width: 500px; 
+    height: 600px;
+    margin: 0 auto; 
+    padding: 30px;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="tel"] {
+    padding: 10px;
+    border: 3.5px solid #1c7268;
+    border-radius: 15px;
+    outline: none;
+    background-color: #F5FFF9;
+}
+#signupbox h3 
+{
+    text-align: center;
+}
+#signupbox label
+{
+    font-weight: bold;
+}
+input::placeholder {
+    color: black;
+}
+#signupbox input
+{
+    margin-bottom: 5px;
+}
+.row-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.half-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#signupbox input {
+    margin-bottom: 5px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+#signupbox button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    width: 220px; 
+    padding: 10px;
+}
+#signupbox a
+{
+    color: #374D55; 
+    font-style: italic;  
+    text-decoration: none; 
+    display: block;
+    font-size: large;
+    text-align: center;
+    cursor: pointer; 
+    transition: color 0.2s ease; 
+}
+#signupbox a:hover {
+
+    text-decoration: underline; 
+}
+/*signup css End*/
     form {
         margin-top: 15%;
         text-align: left;
