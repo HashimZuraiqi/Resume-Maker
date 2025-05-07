@@ -14,9 +14,9 @@
             <!-- <div class="col-lg-12"> -->
                 <div id="signupbox">
                     <h3>SIGN UP</h3>
-                    <form>
+                    <form action="signup.php" method="post">
                         <label for="username">EMAIL ADDRESS</label><br>
-                        <input type="text" name="username" id="username" placeholder="example@gmail.com"><br>
+                        <input type="email" name="username" id="username" placeholder="example@gmail.com"><br>
                         <label for="password">PASSWORD</label><br>
                         <input type="password" name="password" id="password" placeholder="************">
                         <div class="row-fields">
@@ -39,3 +39,32 @@
 </div>
 </body>
 </html>
+
+<?php
+$host = 'localhost';
+$db = 'resume-builder';
+$user = 'root';
+$pass = '';
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$username = $_POST['username'];
+$password = $_POST['password'];
+$birthdate = $_POST['date'];
+$phone = $_POST["phonenumber"];
+
+$hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+$sql = "INSERT INTO users (username, password, birthdate, phone)
+        VALUES ('$username', '$hashedPassword', '$birthdate', '$phone')";
+
+if($conn->query($sql) === TRUE) {
+    echo "New record created";
+    header("Location: login.php");
+}
+else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+?>
