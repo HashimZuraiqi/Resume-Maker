@@ -1,4 +1,4 @@
-    /*index.html*/
+/*index.html*/
     *{
         scroll-behavior: smooth;
     }
@@ -143,10 +143,7 @@
     border-radius: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="tel"] {
+input {
     padding: 10px;
     border: 3.5px solid #1c7268;
     border-radius: 15px;
@@ -310,3 +307,228 @@ input::placeholder {
            height: auto;
         }
     }
+
+/* General form container styling for login and signup pages */
+.form-container {
+    height: 70vh;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: #f5fff9;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.form-container h2, .form-container h3 {
+    text-align: center;
+    color: #06202B;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #06202B;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #077a7d;
+    background-color: #f5fff9;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.form-container input::placeholder {
+    color: #aaa;
+}
+
+.form-container button {
+    display: block;
+    background-color: #077a7d;
+    color: white;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-container button:hover {
+    background-color: #06202B;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Center the link in the form */
+.form-container a {
+    color: #077a7d;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    text-align: center; /* Center the link */
+    margin-top: 10px; /* Add some spacing above the link */
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-container input {
+        width: 100%;
+    }
+}
+
+/* General Dashboard Page Styling */
+.dashboard-page {
+    background-color: #f5ecda;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+.dashboard-header {
+    background-color: #06202B;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dashboard-header nav ul li {
+    display: inline;
+}
+
+.dashboard-header nav ul li a {
+    color: #7ae2cf;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.dashboard-header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+.dashboard-main {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background-color: #f5fff9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-card h3 {
+    color: #06202B;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.dashboard-card p {
+    color: #374D55;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.dashboard-card a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.dashboard-card a.btn-primary {
+    background-color: #077a7d;
+    color: white;
+}
+
+.dashboard-card a.btn-warning {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.dashboard-card a.btn-success {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+.dashboard-footer {
+    background-color: #06202B;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-main {
+        padding: 20px;
+    }
+
+    .dashboard-card {
+        margin-bottom: 20px;
+    }
+
+    .dashboard-header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

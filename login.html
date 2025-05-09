@@ -10,21 +10,21 @@
 </head>
 <body>
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div id="login-box">
-          <h2><strong>LOG IN</strong></h2>
-          <form action="login.php" method="get">
-            <label for="email"><strong>EMAIL ADDRESS</strong></label><br/>
-            <input type="email" id="email" placeholder="Enter email" required /><br/>
-  
-            <label for="password"><strong>PASSWORD</strong></label><br/>
-            <input type="password" id="password" placeholder="Enter password" required /><br/>
-  
-            <button type="submit">LOG IN</button>
-          </form>
-          <a>forgot your password?</a>
+        <div class="row justify-content-center">
+            <div class="form-container">
+                <h2><strong>LOG IN</strong></h2>
+                <form action="login.php" method="post">
+                    <label for="email"><strong>EMAIL ADDRESS</strong></label>
+                    <input type="email" name="email" id="email" placeholder="Enter email" required />
+
+                    <label for="password"><strong>PASSWORD</strong></label>
+                    <input type="password" name="password" id="password" placeholder="Enter password" required />
+
+                    <button type="submit">LOG IN</button>
+                    <a href="forgot_password.php">Forgot your password?</a>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
 </html>
