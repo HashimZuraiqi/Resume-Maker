@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare("SELECT id, password FROM users WHERE email = ?");
+    // ✅ Get user id, username, and password hash
+    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -25,10 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $row = $result->fetch_assoc();
         $hashedPassword = $row['password'];
 
-        // Verify the password
+        // ✅ Verify password
         if (password_verify($password, $hashedPassword)) {
+            // ✅ Set correct session variables
             $_SESSION['user_id'] = $row['id'];
-            header("Location: dashboard.php"); // Redirect to the homepage or dashboard
+            $_SESSION['username'] = $row['username']; // ✅ This was missing!
+
+            header("Location: dashboard.php"); // Redirect to dashboard
             exit();
         } else {
             echo "Invalid email or password.";
