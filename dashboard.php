@@ -32,25 +32,18 @@ if (!isset($_SESSION['user_id'])) {
     <main class="dashboard-main">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="dashboard-card">
                         <h3>Create Resume</h3>
                         <p>Start building your resume from scratch.</p>
                         <a href="create_resume.php" class="btn btn-primary">Create</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="dashboard-card">
                         <h3>Edit Resume</h3>
                         <p>Edit an existing resume you've created.</p>
                         <a href="edit_resume.php" class="btn btn-warning">Edit</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="dashboard-card">
-                        <h3>Download Resume</h3>
-                        <p>Download your completed resumes in PDF format.</p>
-                        <a href="download_resume.php" class="btn btn-success">Download</a>
                     </div>
                 </div>
             </div> <!-- Close row -->

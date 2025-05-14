@@ -1,0 +1,12 @@
+{
+    "name": "hashim/zui",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Hashim\\Zui\\": "src/"
+        }
+    },
+    "require": {
+        "tecnickcom/tcpdf": "*@dev"
+    }
+}
