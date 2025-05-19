@@ -401,7 +401,7 @@ input::placeholder {
     display: block;
     background-color: #077a7d;
     color: white;
-    width: 100px;
+    width: 115px;
     margin: 20px auto;
     padding: 10px;
     font-size: 15px;
@@ -456,6 +456,11 @@ input::placeholder {
     transform: scale(1.7);
     transform-origin: top center;
   }
+  /* Added a little bit of zoom 1.2 for create resume page*/
+    .form-container#maker {
+        transform: scale(1.2);
+        transform-origin: top center;
+    }
 }
 /* General Dashboard Page Styling */
 .dashboard-page {
@@ -503,7 +508,6 @@ input::placeholder {
 .dashboard-header nav ul li a:hover {
     text-decoration: underline;
 }
-
 /* Main Content Styling */
 .dashboard-main {
     flex: 1;
@@ -517,6 +521,16 @@ input::placeholder {
     max-width: 1200px;
     margin: 0 auto;
 }
+/* Dashboard img and gif styling start*/
+
+/* specific css so the black line doesn't appear on the gif */
+.col-md-12.text-center {
+     user-select: none;          /* Standard: Prevents the user from selecting text or showing the text cursor (caret) in this container */
+    -webkit-user-select: none;  /* Safari/Chrome: Vendor prefix for older WebKit browsers */
+    -ms-user-select: none;      /* Internet Explorer/Edge: Vendor prefix for Microsoft browsers */
+}
+
+/* Dashboard img and gif styling end*/
 
 /* Dashboard Cards */
 .dashboard-card {
@@ -577,7 +591,80 @@ input::placeholder {
     margin-top: 20px;
     font-size: 14px;
 }
+/*Create Resume CSS*/
 
+.button-group {
+  display: flex; 
+    justify-content: center;
+    align-items: center; 
+    gap: 10px; 
+}
+.button-group a {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+}
+.button-group button {
+    margin: 0; 
+}
+
+/* Resume List CSS */
+
+/* Make the resume list table scrollable if too many contents being added to it */
+.resume-list-table {
+    display: block;
+    max-height: 350px;
+    overflow-y: auto;
+    width: 100%;
+}
+.resume-list-table table {
+    width: 100%;
+}
+/* Custom styling for Edit and Download buttons*/
+.resume-list-table .btn-primary {
+    background-color: #078f94;
+    color: #fff;
+    border: none;
+}
+.resume-list-table .btn-success {
+    background-color: #7ab87a;
+    color: #fff;
+    border: none;
+}
+.resume-list-table .btn-primary:hover,
+.resume-list-table .btn-success:hover {
+    background-color: #06202B;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.resume-list-table .btn {
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 6px 18px;
+    font-size: 14px;
+    margin: 2px 0;
+}
+/* Back button */
+a[href="dashboard.php"] > button {
+      display: block;
+    background-color: #077a7d;
+    color: white;
+    width: 115px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+a[href="dashboard.php"] > button:hover {
+    background-color: #06202B;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .dashboard-main {
@@ -596,6 +683,26 @@ input::placeholder {
         scale: 1;
     }
 }
+
+/* Media query for create_resume.php to make it more responsive on phones especially small phones*/
+@media (max-width: 600px) {
+  .signup-page {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+    overflow-y: auto;
+  }
+  .form-container#maker {
+    height: auto;
+    min-height: unset;
+    margin: 30px auto;
+    padding: 20px 5px;
+    width: 98%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 
 /* Footer styles */
 footer {
@@ -666,3 +773,4 @@ dotlottie-player {
     }
 }
 
+/* >>>>>>> 016ca3d2a164301a4582c7988e641a5724f1775a */

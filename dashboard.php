@@ -32,6 +32,13 @@ if (!isset($_SESSION['user_id'])) {
     <main class="dashboard-main">
         <div class="container">
             <div class="row">
+                <div class="col-md-12 text-center">
+                   <h1>Start Making or Editing your Resumes now!</h1>
+                <img src="images/resume-video.gif" alt="Welcome GIF">
+                    <!-- <p>Manage your resumes below.</p> -->
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6">
                     <div class="dashboard-card">
                         <h3>Create Resume</h3>

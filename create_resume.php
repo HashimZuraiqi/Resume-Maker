@@ -93,8 +93,10 @@ $conn->close();
 
                     <label for="education">Education</label>
                     <textarea name="education" id="education" placeholder="Describe your education..." required></textarea>
-
-                    <button type="submit">Save Resume</button>
+                    <div class="button-group">
+                        <a href="dashboard.php"><button type="button">Back</button></a>
+                        <button type="submit">Save Resume</button>
+                    </div>
                 </form>
             </div>
         </div>
