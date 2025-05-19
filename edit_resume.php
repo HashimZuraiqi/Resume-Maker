@@ -167,6 +167,7 @@ $conn->close();
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
+                            <a href="dashboard.php"><button>Back</button></a>
                         <?php else: ?>
                             <p>You have not created any resumes yet. <a href="create_resume.php">Create a new resume</a>.</p>
                         <?php endif; ?>
@@ -174,7 +175,8 @@ $conn->close();
 
                     <?php if ($resume): ?>
                         <!-- Display resume edit form -->
-                        <form method="POST" action="edit_resume.php?resume_id=<?php echo urlencode($resume['resume_id']); ?>">
+                        <form method="POST" action="edit_resume.php?resume_id=
+                         <?php echo urlencode($resume['resume_id']); ?>">
                             <input type="hidden" name="resume_id" value="<?php echo htmlspecialchars($resume['resume_id']); ?>">
 
                             <label for="name">Full Name</label>
