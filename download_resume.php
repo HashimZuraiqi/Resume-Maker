@@ -40,9 +40,9 @@ if ($result->num_rows === 1) {
     $html .= '<strong>Phone:</strong> ' . htmlspecialchars($resume['phone']) . '<br>';
     $html .= '<strong>Address:</strong> ' . htmlspecialchars($resume['address']) . '</p>';
 
-    $html .= '<h3>Skills</h3><p>' . nl2br(htmlspecialchars($resume['skills'])) . '</p>';
-    $html .= '<h3>Experience</h3><p>' . nl2br(htmlspecialchars($resume['experience'])) . '</p>';
     $html .= '<h3>Education</h3><p>' . nl2br(htmlspecialchars($resume['education'])) . '</p>';
+    $html .= '<h3>Experience</h3><p>' . nl2br(htmlspecialchars($resume['experience'])) . '</p>';
+    $html .= '<h3>Skills</h3><p>' . nl2br(htmlspecialchars($resume['skills'])) . '</p>';
 
     $pdf->writeHTML($html, true, false, true, false, '');
 
