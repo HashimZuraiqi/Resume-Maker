@@ -658,17 +658,10 @@ dotlottie-player {
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
-@media (max-width: 991px) {
-    dotlottie-player {
-        width: 220px;
-        height: 220px;
-    }
-}
-
 @media (max-width: 575px) {
     dotlottie-player {
-        width: 140px;
-        height: 140px;
+        width: 340px;
+        height: 340px;
         margin-bottom: 24px;
     }
 }
