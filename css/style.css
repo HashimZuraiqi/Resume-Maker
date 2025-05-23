@@ -263,7 +263,16 @@ input::placeholder {
         max-width: 300px;
         border-radius: 10px;
         overflow: hidden;
-      }
+    }
+      .roller-item a {
+       text-decoration: none; 
+       outline: none; 
+    }
+
+    .roller-item a:focus {
+      outline: none; 
+      border: none; 
+    }
       .roller-item img {
         width: 100%;
         border-radius: 10px;
