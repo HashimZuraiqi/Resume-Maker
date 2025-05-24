@@ -2,7 +2,7 @@
 session_start();
     
 $host = 'localhost';
-$db = 'resume maker'; // Ensure this matches your database name
+$db = 'resume maker';
 $user = 'root';
 $pass = '';
 
