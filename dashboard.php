@@ -53,8 +53,8 @@ if (!isset($_SESSION['user_id'])) {
                         <a href="edit_resume.php" class="btn btn-warning">Edit</a>
                     </div>
                 </div>
-            </div> <!-- Close row -->
-        </div> <!-- Close container -->
+            </div> 
+        </div> 
     </main>
 
     <footer class="dashboard-footer">
